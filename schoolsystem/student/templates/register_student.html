@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body  style="background-color: rgb(235, 232, 232);">
     {% extends 'base.html' %}
 
     {% load crispy_forms_tags %}
     
     {% block content %}
-    <h2>REGISTER</h2>
-      <form method="post" novalidate>
+    <div id="formbody" >
+    <h3 style="color: purple;">REGISTER</h3>
+      <form method="post" novalidate name="form">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-success">SUBMIT</button>
+        <button type="submit" class="btn btn-success" style="width: 100%;font-size: 20px;margin-bottom: 10%;background-color: purple;">SUBMIT</button>
       </form>
+    </div>
     {% endblock %}
+    
     
 </body>
 </html>
