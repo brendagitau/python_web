@@ -1,5 +1,6 @@
 import datetime
 from django.core.validators import MaxValueValidator, MinValueValidator
+#import phonenumber
 
 
 from django.db import models
@@ -33,14 +34,12 @@ class Student(models.Model):
     first_name = models.CharField(max_length=12)
     last_name = models.CharField(max_length=20)
     age = models.PositiveSmallIntegerField()
-    birth_date =models.DateField()
-    nationality = models.CharField(max_length=20, choices = NATIONALITY,
-        default = 'KENYAN')
-    gender = models.CharField(max_length=20, choices = GENDER,
-        default = 'FEMALE')
+    birth_date =models.DateField(default='dd-mm-year')
+    nationality = models.CharField(max_length=20, choices = NATIONALITY,default = 'KENYAN')
+    gender = models.CharField(max_length=20, choices = GENDER,default = 'FEMALE')
     student_id = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=20)
-    admission_date =models.DateField()
+    admission_date =models.DateField(default='dd-mm-year')
     guardian_name = models.CharField(max_length=30)
     guardian_phone_number = models.CharField(max_length=20)
     medical_report=models.FileField(upload_to='documents/%Y/%m/%d')

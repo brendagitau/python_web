@@ -17,9 +17,10 @@
       <form method="post" novalidate name="form">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-success" style="width: 100%;font-size: 20px;margin-bottom: 10%;background-color: purple;">SUBMIT</button>
+        <button type="submit" style="width: 100%;font-size: 20px;margin-bottom: 10%;background-color: purple;">SUBMIT</button>
       </form>
     </div>
+  
     {% endblock %}
     
     
