@@ -6,9 +6,16 @@ class StudentRegistrationForm(forms.ModelForm):
     class Meta:
         model = Student
         fields ="__all__"
-        Widget = {
-        
+        widgets = {
+            'nationality':forms.Select(attrs={'class':'form_control','id':'nationality',}),
+            'gender':forms.Select(attrs={'class':'form_control','id':'gender',}),
+        } 
+        labels = {
+           
+              'nationality':"Country of Residence",
+               
+        }
 
-        }  
+
 
 

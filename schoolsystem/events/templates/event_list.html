@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+    {% for event in events %}
+        <tr>
+            <th>{{ event.event_name }}</th>
+            <th>{{ event.event_description }}</th>
+            <th>{{ event.venue }}</th>
+            <th>{{ event.event_date }}</th>
+            <th>{{ event.attendees }}</th>
+        </tr>
+   
+    {% endfor %}
+</table>
+<style>
+    body{
+    background: rgb(15, 14, 14);
+
+}
+table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    table-layout: fixed;
+}
+table,tr,th,td{
+    padding: 20px;
+    color: rgb(10, 154, 190);
+    border: 1px solid rgb(6, 61, 99);
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
+   
+}
+td:hover{
+    background: rgb(148, 206, 253) ;
+}
+h1{
+    text-align: center;
+    color: rgb(82, 226, 226);
+    padding-top: 10%;
+}
+</style>
+
+
+
+    
+</body>
+</html>

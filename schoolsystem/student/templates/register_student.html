@@ -4,25 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body  style="background-color: rgb(235, 232, 232);">
-    {% extends 'base.html' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
 
-    {% load crispy_forms_tags %}
-    
-    {% block content %}
-    <div id="formbody" >
-    <h3 style="color: purple;">REGISTER</h3>
-      <form method="post" novalidate name="form">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" style="width: 100%;font-size: 20px;margin-bottom: 10%;background-color: purple;">SUBMIT</button>
-      </form>
-    </div>
-  
-    {% endblock %}
-    
-    
+    <title>codeHive Registration</title>
+</head>
+<body style="background-color: rgb(211, 209, 209);">
+    <div class="form">
+      <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99_HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
+    <h1 style="font-size: 55px;color: purple;">codeHive<br> Student Registration</h1>
+   
+   
+    <form method="POST"  enctype="multipart/form-data" >
+     <p style="color: purple; font-size: 20px;"> Fill in the form to register:</p> <hr>
+      {{ form.as_p }}
+      {% csrf_token %}
+       <button  type="submit" 
+        style="background-color: purple; 
+        color: white;width: 100%;
+        height: 40px;
+         border-radius: 10px; 
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;">
+         SUBMIT</button>
+    </form>
+</div>
+      <style>
+        .pic{
+          margin-bottom: -7%;
+          width: 40%;
+        }
+        select{
+           width: 95%;
+           border: 1px solid purple ;
+           font-size: 15px;
+           padding: 8px 10px;
+           border-radius: 5px; 
+       }
+          body{
+        margin:0;
+        font-family: 'Cinzel', serif;
+        font-size:17px;
+        background:#fcfafb;
+        background-repeat: no-repeat;
+          }
+          h1{
+          
+        
+        
+          padding-top: 12px;
+          }
+          .form{
+            margin:4% auto 0 auto;
+            padding:30px;
+            width:700px;
+            height:auto;
+            overflow:hidden;
+            background:#fcfafb;
+            border-radius:10px;
+            font-weight: bolder;
+            font-family: 'Montserrat', sans-serif;
+          }
+          input{
+           width: 98%;
+           outline: none;
+           border: 1px solid purple ;
+           font-size: 15px;
+           padding: 8px 10px;
+           border-radius: 5px; 
+       }
+       
+       #nationality{
+        background-color: white;
+        width: 101.5%;
+
+       }
+       #gender{
+        background-color: white;
+        width: 101.5%;
+
+       }
+       
+
+
+
+       
+      </style>
 </body>
 </html>
